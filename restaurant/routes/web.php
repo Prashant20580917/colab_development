@@ -18,17 +18,11 @@ Route::get("/deletemenu/{id}",[AdminController::class,"deletemenu"]);
 
 Route::get("/foodmenu",[AdminController::class,"foodmenu"]);
 
-Route::post("/uploadfood",[AdminController::class,"upload"]);
-
-Route::get("/deleteuser/{id}",[AdminController::class,"deleteuser"]);
-
 Route::post("/reservation",[AdminController::class,"reservation"]);
 
 Route::get("/viewchef",[AdminController::class,"viewchef"]);
 
-Route::get("/remove/{id}",[HomeController::class,"remove"]);
 
-Route::post("/orderconfirm",[HomeController::class,"orderconfirm"]);
 
 
 
