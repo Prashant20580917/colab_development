@@ -12,8 +12,6 @@ Route::get("/",[HomeController::class,"index"]);
 
 Route::get("/redirects",[HomeController::class,"redirects"]);
 
-
-
 Route::get("/users",[AdminController::class,"user"]);
 
 Route::get("/deletemenu/{id}",[AdminController::class,"deletemenu"]);
@@ -24,21 +22,9 @@ Route::post("/uploadfood",[AdminController::class,"upload"]);
 
 Route::get("/deleteuser/{id}",[AdminController::class,"deleteuser"]);
 
-
-Route::get("/updateview/{id}",[AdminController::class,"updateview"]);
-
-
-Route::post("/update/{id}",[AdminController::class,"update"]);
-
-
 Route::post("/reservation",[AdminController::class,"reservation"]);
 
-Route::get("/viewreservation",[AdminController::class,"viewreservation"]);
-
 Route::get("/viewchef",[AdminController::class,"viewchef"]);
-
-
-
 
 Route::get("/remove/{id}",[HomeController::class,"remove"]);
 
