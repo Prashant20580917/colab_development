@@ -16,7 +16,10 @@ Route::get("/users",[AdminController::class,"user"]);
 
 Route::get("/deletemenu/{id}",[AdminController::class,"deletemenu"]);
 
+
 Route::get("/foodmenu",[AdminController::class,"foodmenu"]);
+
+
 
 Route::post("/reservation",[AdminController::class,"reservation"]);
 
