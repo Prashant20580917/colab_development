@@ -34,6 +34,8 @@ class AdminController extends Controller
         $data->delete();
         return redirect()->back();
     }
+
+    
     
     public function reservation(Request $request)
     {
