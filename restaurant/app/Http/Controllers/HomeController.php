@@ -19,7 +19,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        
+        if(Auth::id())
+        {
+            return redirect('redirects');
+        }
+        else
+
         $data=food::all();
 
         $data2=foodchef::all();
