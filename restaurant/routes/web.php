@@ -37,6 +37,10 @@ Route::get("/deletechef/{id}",[AdminController::class,"deletechef"]);
 
 
 
+Route::get("/orders",[AdminController::class,"orders"]);
+
+
+
 
 
 
