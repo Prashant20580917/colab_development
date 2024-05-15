@@ -99,7 +99,7 @@ class AdminController extends Controller
         
     }
 
-    
+
     public function reservation(Request $request)
     {
         $data=new reservation;
@@ -124,6 +124,10 @@ class AdminController extends Controller
         return redirect()->back();
         
     }
+
+
+    
+    
 
     public function orders()
     {
