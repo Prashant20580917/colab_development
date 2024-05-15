@@ -125,6 +125,22 @@ class AdminController extends Controller
         
     }
 
+    public function viewreservation()
+    {
+
+        if(Auth::id())
+        {
+
+        $data=reservation::all();
+        return view("admin.adminreservation",compact("data"));
+        }
+        else
+        {
+            return redirect('login');
+        }
+
+    }
+
 
     public function viewchef()
     {
