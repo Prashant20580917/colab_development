@@ -13,8 +13,12 @@
    
        @include("admin.navbar")
        
+<<<<<<< HEAD
        <form action="{{url('/uploadchef')}}" method="POST" enctype="multipart/form-data">
         @csrf
+=======
+       
+>>>>>>> 8e1c9aee83bb7a949eea05899cb7c0a825ed2a58
         <div>
             <label>Name</label>
             <input style="color:blue" type="text" name="name" required="" placeholder="Enter Name">
@@ -44,6 +48,7 @@
             <th style="padding:30px;">Action</th>
             <th style="padding:30px;">Action2</th>
         </tr>
+<<<<<<< HEAD
 @foreach($data as $data)
         <tr align="center">
             <td>{{$data->name}}</td>
@@ -54,6 +59,9 @@
         </tr>
 
         @endforeach
+=======
+
+>>>>>>> 8e1c9aee83bb7a949eea05899cb7c0a825ed2a58
        </table>
 
        
