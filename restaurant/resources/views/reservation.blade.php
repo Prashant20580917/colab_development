@@ -1,4 +1,4 @@
- <!-- ***** Reserved Us Area Starts ***** -->
+ <!-- ***** Reservation Us Area Starts ***** -->
  <section class="section" id="reservation">
         <div class="container">
             <div class="row">
