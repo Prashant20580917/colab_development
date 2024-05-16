@@ -99,7 +99,6 @@ class AdminController extends Controller
         
     }
 
-
     public function reservation(Request $request)
     {
         $data=new reservation;
@@ -124,7 +123,6 @@ class AdminController extends Controller
         return redirect()->back();
         
     }
-
     public function viewreservation()
     {
 
@@ -138,9 +136,8 @@ class AdminController extends Controller
         {
             return redirect('login');
         }
-
+        
     }
-
 
     public function viewchef()
     {
@@ -206,8 +203,6 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    
-
     public function orders()
     {
         $data=order::all();
@@ -223,6 +218,4 @@ class AdminController extends Controller
 
         return view('admin.orders',compact('data'));
     }
-
 }
-
