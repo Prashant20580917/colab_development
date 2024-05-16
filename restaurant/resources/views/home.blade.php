@@ -54,7 +54,9 @@ https://templatemo.com/tm-558-klassy-cafe
                         <a href="index.html" class="logo">
                         <!-- <img src="assets/images/onebyte2-logo.png" alt="Klassy Cafe HTML Template" style="width: 240px; height: 200px; position: relative; top: -70px;"> -->
 
-                        
+                        <a class="menu-trigger">
+                            <span>Menu</span>
+                        </a>
 
 
                         </a>
@@ -76,11 +78,19 @@ https://templatemo.com/tm-558-klassy-cafe
                         -->
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
                             <li class="scroll-to-section"><a href="#chefs">Chefs</a></li> 
-                            
+                            <li class="submenu">
+                                <a href="javascript:;">Features</a>
+                                <ul>
+                                    <li><a href="#">Features Page 1</a></li>
+                                    <li><a href="#">Features Page 2</a></li>
+                                    <li><a href="#">Features Page 3</a></li>
+                                    <li><a href="#">Features Page 4</a></li>
+                                </ul>
+                            </li>
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
 
-                            <!-- <li class="scroll-to-section" style="background-color:red;">
+                            <li class="scroll-to-section" style="background-color:red;">
                                 @auth
                                 <a href="{{url('/showcart',Auth::user()->id)}}">
                             Cart{{$count}}
@@ -90,7 +100,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             @guest
                             Cart[0]
                             @endguest
-                        </a></li>  -->
+                        </a></li> 
 
                             <li>
     @if (Route::has('login'))
@@ -223,27 +233,17 @@ https://templatemo.com/tm-558-klassy-cafe
     </section>
     <!-- ***** About Area Ends ***** -->
 
-
-   <!-----chef start>
-   <---****chef end--->
-   @include('food')
-   
+    @include('food')
 
     @include('foodchef')
 
-    @include('reservation')
-
    <!-----chef start>
    <---****chef end--->
    
 
    <!-----reservation start>
    <---****reservation end--->
- 
-
-   <!-----reservation start>
-   <---****reservation end--->
-   
+   @include("reservation")
    
 
     <!-- ***** Menu Area Starts ***** -->
@@ -511,9 +511,9 @@ https://templatemo.com/tm-558-klassy-cafe
         </div>
     </section>
     <!-- ***** Chefs Area Ends ***** --> 
-
-   <!-- Footer -->
-   <footer>
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-xs-12">
@@ -528,12 +528,12 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/onebyte-logo4.png" alt="One Byte Restaurant HTML Template" style="width: 400px; height: 400px; position: relative; bottom: 200px; right: 70px;></a>
+                        <!-- <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">
-                    <div class="left-text-content" style="position: relative; bottom: 400px; left: 400px">
-                        <p>© Copyright One Byte Foods Co.
+                    <div class="left-text-content">
+                        <p>© Copyright One Byte Co.
                         
                         <br>Design: TemplateMo</p>
                     </div>
@@ -541,7 +541,6 @@ https://templatemo.com/tm-558-klassy-cafe
             </div>
         </div>
     </footer>
-   
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
