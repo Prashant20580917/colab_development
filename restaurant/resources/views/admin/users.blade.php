@@ -21,7 +21,22 @@
                 <th style="padding:30px">Action</th>
             </tr>
 
-           
+            @foreach($data as $data)
+            <tr align="center">
+                <td>{{$data->name}}</td>
+                <td>{{$data->email}}</td>
+
+                @if ($data->usertype=="0")
+                <td><a href="{{url('/deleteuser',$data->id)}}">Delete</a></td>
+                @else
+                <td><a>Not Allowed</a></td>
+
+                @endif
+
+
+            </tr>
+            @endforeach
+
 
         </table>
        </div>
