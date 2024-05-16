@@ -158,7 +158,28 @@ https://templatemo.com/tm-558-klassy-cafe
 
         </tr>
 
-       
+        <form action="{{url('orderconfirm')}}" method="POST">
+            @csrf
+
+        @foreach($data as $data)
+
+        <tr align="center">
+            <td><input type="text" name="foodname[]" value="{{$data->title}}" hidden="">{{$data->title}}</td>
+            <td><input type="text" name="price[]" value="{{$data->price}}" hidden="">{{$data->price}}</td>
+            <td><input type="text" name="quantity[]" value="{{$data->quantity}}" hidden="">{{$data->quantity}}</td>
+            <td><img height="150" width="150" src="/foodimage/{{$data->image}}"></td>
+          
+            
+        </tr>
+        @endforeach
+      
+
+        @foreach($data2 as $data2)
+        <tr style="position:relative; top:-120px; right:-530px">
+        <td><a href="{{url('/remove',$data2->id)}}" class="btn btn-warning">Remove</a></td>
+        </tr>
+
+        @endforeach
     </table>
 
     <div align="center" style="padding:10px;">
