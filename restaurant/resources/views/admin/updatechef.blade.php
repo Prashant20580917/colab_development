@@ -18,12 +18,12 @@
         @csrf
         <div>
             <label>Chef Name</label>
-            <input style="color:blue;" type="text" name="speciality" value="{{$data->speciality}}">
+            <input style="color:blue;" type="text" name="name" value="{{$data->speciality}}">
         </div>
 
         <div>
             <label>Speciality</label>
-            <input style="color:blue;" type="text" name="name" value="{{$data->name}}">
+            <input style="color:blue;" type="text" name="speciality" value="{{$data->name}}">
         </div>
 
         <div>
