@@ -101,6 +101,9 @@ class AdminController extends Controller
 
     public function reservation(Request $request)
     {
+        if (Auth::id())
+        {
+
         $data=new reservation;
 
       
@@ -121,8 +124,13 @@ class AdminController extends Controller
         $data->save();
 
         return redirect()->back();
+    }
+    else{
+        return redirect('/login');
+    }
         
     }
+    
     public function viewreservation()
     {
 
